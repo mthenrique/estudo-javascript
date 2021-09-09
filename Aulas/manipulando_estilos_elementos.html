@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+
+    
+</head>
+<body>
+    <h3>Manipulando estilos</h3>
+    <button type="button" onclick="modificaEstilo('#FF0000', '100px', '200px')">Vermelho</button>
+    <button type="button" onclick="modificaEstilo('#00FF00', '300px', '150px')">Verde</button>
+    <button type="button" onclick="modificaEstilo('#0000FF', '50px', '50px')">Azul</button>
+
+    <br>
+    <hr>
+
+    <div id="box" style="border: 1px solid grey; width: 100px; height: 100px;"></div>
+    
+    <script>
+        function modificaEstilo(corDeFundo, w, h){
+            document.getElementById('box').style.backgroundColor = corDeFundo
+            document.getElementById('box').style.width = w
+            document.getElementById('box').style.height = h
+
+        }
+    </script>
+</body>
+</html>

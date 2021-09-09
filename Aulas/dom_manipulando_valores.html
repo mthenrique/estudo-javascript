@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+
+    
+</head>
+<body>
+    <input type="text" name="msg" id="msg" onkeyup="distribuirCaracter()" placeholder="Digite seu texto aqui...">
+    <br>
+    <hr>
+    <br>
+    <span>Letras</span>
+    <input type="text" name="" id="letra" disabled="disabled" placeholder="Digite um caracter aqui">
+    <br>
+    <hr>
+    <br>
+    <span>Numeros:</span>
+    <input type="text" name="" id="numero" disabled="disabled" placeholder="Digite um caracter aqui">
+
+
+    <script>
+        function distribuirCaracter(){
+            //selecionar o valor digitado
+            var caracter = document.getElementById('msg').value
+            //limpar o campo de digitação
+            document.getElementById('msg').value = ''
+
+            //limpar espaços nas extremidades da msg
+            caracter.trim()
+
+            switch(caracter){
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    //adicionar o caractere no campo referente a números
+                    document.getElementById('numero').value = caracter
+                    break;
+                default:
+                    //Adicionar o caractere no campo referente a letras
+                    document.getElementById('letra').value = caracter
+            }
+        }
+
+
+    </script>
+</body>
+</html>

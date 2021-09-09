@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+
+    <style>
+        .estilo1{
+            background-color: red;
+            color: white;
+        }
+
+        .estilo2{
+            background-color: red;
+            color: white;
+            padding: 150px;
+            text-align: center;
+            font-size: 15px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h3>Manipulando classes</h3>
+    <hr>
+
+    <div id="mensagem" class="estilo1">
+        Modificando a classe do elemento...
+    </div>
+
+    <br>
+    <button type="button" onclick="modificaClasse()">Alterar classe</button>
+
+    <script>
+        function modificaClasse(){
+            document.getElementById('mensagem').className = 'estilo2'
+        }
+    </script>
+</body>
+</html>
